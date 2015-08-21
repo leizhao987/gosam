@@ -192,7 +192,9 @@ def mono(lattice, nx, ny, nz):
 def get_named_lattice(name):
     name = name.lower()
     if name == "cu": # Cu (fcc, A1)
-        lattice = make_fcc_lattice(symbol="Cu", a=3.615)
+        lattice = make_fcc_lattice(symbol="Cu", a=3.615) # Cu: 3.615
+    elif name == "al": # al (fcc, A1)
+        lattice = make_fcc_lattice(symbol="Al", a=4.0495) # Al: 4.0495 (0K) and 4.1219 (750K)
     elif name == "fe": # Fe (bcc, A2)
         lattice = make_bcc_lattice(symbol="Fe", a=2.87)
     elif name == "po": # Polonium (sc, Ah)
